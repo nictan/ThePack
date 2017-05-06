@@ -11,6 +11,7 @@ public class TaskObject {
 	private String TaskName;
 	private int TaskID;
 	private int Priority;
+	private String TaskCategory;
 	
 	/**
 	 * 
@@ -50,6 +51,16 @@ public class TaskObject {
 
 	public void setTaskID(int taskID) {
 		TaskID = taskID;
+	}
+	// *****
+
+	// ***** Get / Set for Task Category
+	public String getTaskCategory() {
+		return TaskCategory;
+	}
+
+	public void setTaskCategory(String taskCategory) {
+		TaskCategory = taskCategory;
 	}
 	// *****
 }
