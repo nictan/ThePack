@@ -79,13 +79,19 @@ public class TaskObject {
 		return StartDateTime;
 	}
 
-	public void setStartDateTime(Date startDateTime) {
-		StartDateTime = startDateTime;
+	public Boolean setStartDateTime(Date startDateTime) {
+		if (startDateTime.after(getEndDateTime()))
+		{
+			return false;
+		}
 		
-		//if (StartDateTime.before(LocalDateTime.now()))
+		if (startDateTime.before(CommonObject.TodayDate()))
 		{
 			setHasStarted(true);
 		}
+
+		StartDateTime = startDateTime;
+		return true;
 	}
 	// *****
 

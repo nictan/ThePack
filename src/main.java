@@ -1,6 +1,7 @@
 import java.time.LocalDateTime;
 import java.util.Date;
 
+import Scheduling.CommonObject;
 import Scheduling.TaskObject;
 
 public class main {
@@ -20,13 +21,9 @@ public class main {
 		System.out.println();
 		System.out.print(k.getTaskName());
 		System.out.println();
-		System.out.print(LocalDateTime.now());
-		
-		Date e = new Date();
-		e.setTime(LocalDateTime.now().getSecond());;
 
 		System.out.println();
-		System.out.print(e);
+		System.out.print(CommonObject.TodayDate());
 	}
 
 }
