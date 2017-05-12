@@ -13,24 +13,21 @@ import java.util.Date;
  */
 public class TaskObject {
 
-	private String TaskName;
-	private int TaskID;
-	private int Priority;
-	private String TaskCategory;
+	private String TaskName = "";
+	private int TaskID = -1;
+	private int Priority = -1;
+	private String TaskCategory = "";
 	private Date StartDateTime;
 	private Date EndDateTime;
 	private Boolean HasStarted = false;
-	
 	
 	/**
 	 * 
 	 */
 	public TaskObject() {
 		// Default Initializer
-		setTaskName("");
-		setPriority(0);
-		setTaskID(0);
-		setHasStarted(false);;
+		StartDateTime = CommonObject.DefaultDateSetting();
+		EndDateTime = CommonObject.DefaultDateSetting();
 	}
 
 	// ***** Get / Set for Task Name
